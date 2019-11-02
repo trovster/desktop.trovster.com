@@ -1,0 +1,74 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+h1, h4, #systemtray, #start, #openprograms, #clock {
+display: none;
+}
+
+html {
+height: 100%;
+background: #004E98 url(../images/osx/background.jpg) no-repeat 0 100%;
+}
+body {
+position: absolute;
+bottom: 0;
+left: 50%;
+margin-left: -300px;
+height: 100px;
+width: 600px;
+background: url(../images/osx/dock_background.png) repeat-x 0 100%;
+}
+
+
+
+#main_icons {
+left: 50px;
+
+}
+#quicklaunch {
+right: 50px;
+}
+ul {
+position: absolute;
+bottom: 0;
+list-style: none;
+
+}
+li {
+float: left;
+}
+li a {
+display: block;
+height: 54px;
+width: 54px;
+overflow: hidden;
+text-decoration: none;
+
+text-indent: -9999px;
+}
+li a {
+background: transparent url(../images/osx/mycomp.png) no-repeat 50% 50%;
+}
+
+
+
+
+
+#my_computer a {
+background-image: url(../images/osx/mycomp_small.png);
+}
+#my_documents a{
+background-image: url(../images/osx/mydocs_small.png);
+}
+#recycle_bin a {
+background-image: url(../images/osx/trash_small.png);
+}
+#my_network_places a {
+background-image: url(../images/osx/network_small.png);
+}
+#quick_firefox a
+{
+background-image: url(../images/osx/firefox_small.png);
+}

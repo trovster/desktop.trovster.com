@@ -1,0 +1,295 @@
+@import url(global.css);
+
+html {
+background-color: #949696;
+}
+
+#taskbar {
+height: 32px;
+background: #616163 url(../images/sustenance/taskbar.png) repeat-x 0 0;
+}
+#startbutton span {
+width: 64px;
+height: 32px;
+background: transparent url(../images/sustenance/start_button.png) no-repeat 0 0;
+}
+/*
+#startbutton:hover span {
+background-position: 0 -31px;
+}
+#startbutton:focus span, #startbutton:active span {
+background-position: 0 -63px;
+}
+*/
+#clock {
+padding: 12px 10px 5px 70px;
+background: #616163 url(../images/sustenance/clock.png) repeat-x 0 0;
+}
+
+
+
+#startbutton span.starthovered {
+background-position: 0 -31px;
+}
+#startbutton span.startclicked {
+background-position: 0 -63px;
+}
+
+
+
+/* start menu */
+#start {
+width: 64px;
+height: 32px;
+}
+#startmenu {
+top: -430px;
+background: transparent url(../images/sustenance/start_menu.png) no-repeat 0 0;
+width: 384px;
+height: 437px;
+}
+#startmenu h3 {
+margin: 10px 20px;
+height: 20px;
+padding: 3px;
+}
+#startmenu h3 img {
+display: none;
+}
+#startmenu #close {
+bottom: 0;
+right: 10px;
+}
+#startmenu #close li a {
+padding: 7px 10px 10px 32px;
+background-position: 0 1px;
+background-color: transparent;
+background-repeat: no-repeat;
+}
+#startmenu li#logoff a {
+background-image: url(../images/sustenance/logoff.png);
+}
+#startmenu li#shutdown a {
+background-image: url(../images/sustenance/shutdown.png);
+}
+#startmenu li#logoff a:hover, #startmenu li#shutdown a:hover {
+background-position: 0 -28px;
+background-color: #757577;
+}
+
+
+
+#systemtray {
+background: transparent url(../images/sustenance/system_tray_arrow.png) no-repeat 2px 0;
+}
+#systemtray li a, #quicklaunch li a, #openprograms li a {
+height: 32px;
+}
+#systemtray li#gmail a span {
+background-image: url(../images/sustenance/system_tray_gmail.png);
+}
+#systemtray li#lan a span {
+background-image: url(../images/sustenance/system_tray_lan.png);
+}
+#systemtray li#winamp a span {
+background-image: url(../images/sustenance/system_tray_winamp.png);
+}
+#systemtray li#msn a span {
+background-image: url(../images/sustenance/system_tray_msn.png);
+}
+
+
+
+
+#quicklaunch, #openprograms {
+left: 65px;
+background: transparent url(../images/sustenance/taskbar_resize.png) no-repeat 0 0;
+}
+#quicklaunch li#quick_desktop a span {
+background-image: url(../images/sustenance/quick_launch_destkop.png);
+}
+#quicklaunch li#quick_firefox a span {
+background-image: url(../images/sustenance/quick_launch_firefox.png);
+}
+#quicklaunch li#quick_winamp a span {
+background-image: url(../images/sustenance/quick_launch_winamp.png);
+}
+#quicklaunch li#quick_flashfxp a span {
+background-image: url(../images/sustenance/quick_launch_flashfxp.png);
+}
+#quicklaunch li#quick_desktop a:hover span, #quicklaunch li#quick_firefox a:hover span,
+#quicklaunch li#quick_winamp a:hover span, #quicklaunch li#quick_flashfxp a:hover span {
+background-position: 0 -32px;
+}
+
+
+#openprograms {
+left: 183px;
+}
+#openprograms li {
+background: #616163 url(../images/sustenance/open_button.png) no-repeat 0 0;
+}
+#openprograms li:hover {
+background: #616163 url(../images/sustenance/open_button.png) no-repeat 0 -32px;
+}
+#openprograms li a {
+width: 124px;
+padding: 13px 0 0 35px;
+background-position: 5px 10px;
+}
+
+
+
+
+
+#recentprograms {
+width: 175px;
+padding: 0 10px;
+}
+#recentprograms dl dt {
+font-weight: bold;
+}
+#recentprograms dl dd a {
+color: #7E7E7E;
+}
+#recent {
+background: transparent url(../images/sustenance/divider.png) no-repeat 50% 0;
+}
+#internetbrowser:hover, #emailclient:hover, #recent li a:hover, #myplaces li a:hover,
+#myplaces li#myrecent ul li a:hover, #allprograms li a:hover, #startmenu #allprograms li ul li.folder a:hover,
+#startmenu #allprograms li ul li#winupdate a:hover, #allprograms li a.stuff, #myplaces li#myrecent a.stuff {
+background-color: #767678;
+}
+
+
+#myplaces {
+top: 35px;
+right: 12px;
+width: 180px;
+}
+#myplaces li a {
+color: #000;
+}
+#myplaces ul {
+background: transparent url(../images/sustenance/divider.png) no-repeat 50% 0;
+}
+#my li#myrecent {
+background: transparent url(../images/sustenance/recent_arrows.png) no-repeat 100% -29px;
+}
+#myrecent ul {
+left: 170px;
+}
+#myplaces li#myrecent ul li a {
+background-color: #E6E6E3;
+}
+
+
+#allprograms ul {
+background: #E6E6E3;
+border: 1px solid #000;
+}
+#winupdate {
+background: transparent url(../images/sustenance/divider.png) no-repeat 50% 100%;
+}
+
+
+
+
+
+#run_dialog div, #display_properties > div {
+background-color: #E6E6E3;
+border: 3px solid #565658;
+}
+#run_dialog h2, #display_properties h2 {
+height: 29px;
+margin: 0 85px 0 0;
+text-align: center;
+background: transparent url(../images/sustenance/window_bar.png) repeat-x 0 0;
+}
+#run_dialog h2 span, #run_dialog h2:after, #display_properties h2 span, #display_properties h2:after {
+height: 29px;
+content: " ";
+display: block;
+background: #949696 url(../images/sustenance/window_corners.png) no-repeat 0 0;
+}
+#run_dialog h2 span, #display_properties h2 span {
+width: 50px;
+float: left;
+}
+#run_dialog h2:after, #display_properties h2:after {
+width: 17px;
+background-position: 0 -29px;
+margin-top: -30px;
+margin-left: 95%;
+}
+
+
+
+
+ul.window_control {
+right: 4px;
+}
+ul.window_control li a {
+width: 28px;
+height: 29px;
+}
+ul.window_control li a span {
+width: 100%;
+height: 100%;
+background: transparent url(../images/sustenance/window_buttons.png) no-repeat 0 0;
+}
+ul.window_control li.max a, ul.window_control li.max a span {
+width: 25px;
+}
+ul.window_control li.max a span {
+background-position: -28px 0;
+}
+ul.window_control li.close a span {
+width: 32px;
+background-position: -52px 0;
+}
+ul.window_control li.min a:hover span, ul.window_control li.min a:focus span {
+background-position: 0 -29px;
+}
+ul.window_control li.max a:hover span, ul.window_control li.max a:focus span {
+background-position: -28px -58px;
+}
+ul.window_control li.close a:hover span, ul.window_control li.close a:focus span {
+background-position: -52px -87px;
+}
+
+
+
+#tabs li a, #display_properties div {
+color: #5e5e5c;
+}
+#display_properties #property_container {
+padding: 5px;
+}
+#display_properties #property_container div {
+margin: 0;
+padding: 10px;
+border: 1px solid #000;
+background-color: #f1f1ee;
+}
+#tabs li.active a, #tabs li a:hover {
+background-color: #f1f1ee;
+}
+#tabs li.active a {
+border-bottom-color: #f1f1ee;
+}
+
+
+
+.buttons a {
+display: block;
+width: 75px;
+height: 25px;
+text-align: center;
+line-height: 23px;
+background: #e6e6e3 url(../images/sustenance/buttons.png) no-repeat 0 0;
+color: #000;
+}
+.buttons a:hover {
+background-position: 0 -29px;
+}

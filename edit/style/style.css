@@ -1,0 +1,187 @@
+/*
+original idea adapter, with permission, from http://darren.lychowyd.com/dos/
+*/
+
+* {
+margin: 0;
+padding: 0;
+}
+html {
+background-color: #000080;
+font: bold 14px/100% monospace;
+height: 100%;
+}
+body {
+min-height: 100%;
+background: #000080 url(../images/line-side.jpg) repeat-y 0 0;
+}
+* html body {
+height: 100%;
+}
+
+ul li {
+list-style: none;
+}
+p {
+margin: 0 0 1em 0;
+}
+
+h1 {
+background: #555557 url(../images/dos_icon.gif) no-repeat 4px 6px;
+color: #fff;
+font-size: 11px;
+padding: 5px 25px;
+border-bottom: 2px solid #C0C0C0;
+}
+h1 span {
+position: absolute;
+top: 1px;
+right: 1px;
+display: block;
+background: #555557 url(../images/buttons.gif) no-repeat 0 0;
+height: 21px;
+width: 50px;
+}
+h2 {
+text-transform: uppercase;
+font-size: 14px;
+width: auto;
+position: absolute;
+top: 13px;
+top: 40px;
+left: 45%;
+padding: 0 7px;
+background: #C0C0C0;
+}
+#content {
+margin-top: -12px;
+background: url(../images/line-corner.jpg) no-repeat 0 0;
+padding: 14px 10px;
+color: #C0C0C0;
+}
+#footer {
+background-color: #C0C0C0;
+position: absolute;
+bottom: 0;
+width: 100%;
+line-height: 115%;
+}
+#footer a {
+margin-left: 10px;
+}
+
+
+
+
+
+ul#navigation {
+border: 1px solid #60605E;
+border-width: 1px 0 0 1px;
+line-height: 80%;
+padding: 0 20px 12px;
+height: 13px;
+background: #C0C0C0 url(../images/line-top.jpg) repeat-x 0 100%;
+}
+ul#navigation > li {
+float: left;
+margin: 0 20px 0 0;
+}
+* html ul#navigation li {
+float: left;
+margin: 0 20px 0 0;
+}
+ul#navigation li div {
+display: none;
+position: absolute;
+top: 13px;
+top: 40px;
+margin-left: -6px;
+border: 1px solid #000;
+border-width: 0 10px 10px 0;
+}
+ul#navigation li:hover div {
+display: block;
+background: #C0C0C0;
+padding: 5px;
+}
+ul#navigation li div ul, ul#navigation li div dl {
+border: 1px solid #000;
+}
+ul#navigation li ul li, ul#navigation li div dl dt {
+margin: 1px 3px;
+}
+ul#navigation li ul li a, ul#navigation li div dl dt a {
+display: block;
+padding: 1px 30px 1px 7px;
+}
+
+
+ul#navigation li div dl dt {
+clear: left;
+float: left;
+min-width: 80px;
+}
+ul#navigation li div dl#view dt {
+min-width: 150px;
+}
+ul#navigation li div dl dd {
+padding: 2px 7px 1px;
+margin: 1px 3px;
+}
+
+ul#navigation li div dl:after {
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+
+.shortcut_key, ul#navigation li div dl {
+display: none;
+}
+ul#navigation li ul li#print, ul#navigation li ul li#fileopen, ul#navigation li dl dt#fileopen {
+margin: 3px 0;
+border: 1px solid #000;
+border-width: 1px 0 1px 0;
+}
+ul#navigation li ul li#fileopen, ul#navigation li dl dt#fileopen { 
+border-width: 1px 0 0 0;
+}
+#print a, #fileopen a {
+padding: 3px;
+margin: 3px;
+}
+
+
+
+
+a:link, a:visited, a:active {
+color: #000;
+text-decoration: none;
+}
+a:hover {
+color: #C0C0C0;
+background-color: #000;
+}
+#content a {
+color: #fff;
+}
+a em {
+font-style: normal;
+color: #fff;
+}
+#footer a:hover {
+background-color: transparent;
+color: #000;
+}
+#footer a:hover:after {
+content: " <-- General Internet-Related Geek-ery ";
+}
+#cursor {
+text-decoration: blink; 
+}
