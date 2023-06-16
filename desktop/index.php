@@ -4,9 +4,8 @@ session_start();
 
 $url = '/';
 
-if($_POST['run_open']=='edit')
-{
-	header('Location: '.$url_path.'/edit/');
+if (array_key_exists('run_open', $_POST) && $_POST['run_open'] == 'edit') {
+	header('Location: ' . $url_path . '/edit/');
 }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -27,7 +26,7 @@ if($_POST['run_open']=='edit')
 <?php
 $css_style_switcher =  '<link rel="stylesheet" type="text/css" media="screen" href="';
 $css_style_switcher .=  'styles/'; // folder of CSS files.
-$css_style_switcher .= (!$_SESSION['css-style-desktop'])?'defaultxp':$_SESSION['css-style-desktop'];
+$css_style_switcher .= (array_key_exists('css-style-desktop', $_SESSION) && $_SESSION['css-style-desktop']) ? $_SESSION['css-style-desktop'] : 'defaultxp';
 $css_style_switcher .= '.css"';
 $css_style_switcher .= ' title="User Defined Style">'."\n";
 echo $css_style_switcher;
@@ -152,16 +151,17 @@ are wrong or do not work.</p>
 <div id="startmenu">
 
 <?php
-$name = 'Trovster';
+$name = 'trovster';
 $gravatar_url = 'images/default_icon.jpg';
-if(isset($_GET['name']))
-{
+$email_address = '';
+
+if (array_key_exists('name', $_GET) && isset($_GET['name'])) {
 	$name = $_GET['name'];
 }
-if(isset($_GET['email']))
-{
+
+if (array_key_exists('email', $_GET) && isset($_GET['email'])) {
 	$email_address = $_GET['email'];
-	$gravatar_url = "http://www.gravatar.com/avatar.php?gravatar_id=".md5($email_address)."&amp;size=48";
+	$gravatar_url = "http://www.gravatar.com/avatar.php?gravatar_id=" . md5($email_address) . "&amp;size=48";
 }
 
 echo '<h3><img src="'.$gravatar_url.'" alt="'.$name.'\'s logo" width="48px" height="48px">'.$name.'</h3>';
@@ -302,7 +302,7 @@ echo '<h3><img src="'.$gravatar_url.'" alt="'.$name.'\'s logo" width="48px" heig
 <li id="lan"><a href="#" title="Local Area Connection"><span></span>LAN</a></li>
 <?php
 
-if(stristr($_GET['email'],'@gmail.com'))
+if(stristr($email_address, '@gmail.com'))
 {
 	echo '<li id="gmail"><a href="http://www.gmail.com" title="No unread mail"><span></span>Gmail</a></li>'."\n";
 }
